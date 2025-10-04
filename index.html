@@ -3,244 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚽ Analyses Paris Sportifs Football</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 500px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 30px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.5s ease-out;
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .profile h1 {
-            font-size: 28px;
-            color: #2d3748;
-            margin-bottom: 10px;
-        }
-        
-        .profile p {
-            color: #718096;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 30px 0;
-            padding: 20px;
-            background: #f7fafc;
-            border-radius: 15px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: 24px;
-            font-weight: bold;
-            color: #667eea;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 12px;
-            color: #718096;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px 25px;
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #2d3748;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .link-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-color: #667eea;
-        }
-        
-        .link-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        
-        .link-btn:hover::before {
-            left: 100%;
-        }
-        
-        .link-icon {
-            font-size: 24px;
-            margin-right: 12px;
-        }
-        
-        .link-btn.primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-        }
-        
-        .link-btn.primary:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-        }
-        
-        .link-btn.donate {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            border: none;
-        }
-        
-        .link-btn.donate:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(245, 87, 108, 0.4);
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-        }
-        
-        .footer p {
-            color: #718096;
-            font-size: 13px;
-            line-height: 1.6;
-        }
-        
-        .warning {
-            background: #fff5f5;
-            border-left: 4px solid #f56565;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .warning p {
-            color: #c53030;
-            font-size: 13px;
-            line-height: 1.5;
-        }
-    </style>
+    <title>⚽ Kilidjaroo - Pronos Football</title>
+    <meta name="description" content="Analyses et pronos football ⚽ | Stats & Value Bets 📊">
+    <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}.container{max-width:500px;width:100%;background:rgba(255,255,255,.95);border-radius:30px;padding:40px 30px;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:slideUp .5s ease-out}@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.profile{text-align:center;margin-bottom:30px}.profile-img{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:50px;box-shadow:0 10px 30px rgba(102,126,234,.4)}.profile h1{font-size:28px;color:#2d3748;margin-bottom:10px}.profile p{color:#718096;font-size:16px;line-height:1.6}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:30px 0;padding:20px;background:#f7fafc;border-radius:15px}.stat-item{text-align:center}.stat-value{font-size:24px;font-weight:bold;color:#667eea;display:block}.stat-label{font-size:12px;color:#718096;margin-top:5px;text-transform:uppercase;letter-spacing:.5px}.pronos-section{background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:20px;padding:25px;margin:25px 0;box-shadow:0 10px 30px rgba(245,87,108,.3);color:white}.pronos-title{font-size:22px;font-weight:bold;margin-bottom:20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px}.prono-card{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border-radius:15px;padding:15px;margin-bottom:15px;border:1px solid rgba(255,255,255,.2)}.prono-card:last-child{margin-bottom:0}.prono-match{font-size:18px;font-weight:bold;margin-bottom:8px}.prono-details{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}.prono-pick{background:rgba(255,255,255,.25);padding:6px 12px;border-radius:8px;font-size:14px;font-weight:600}.prono-cote{font-size:16px;font-weight:bold}.prono-time{font-size:13px;opacity:.9}.no-pronos{text-align:center;padding:20px;font-size:16px;opacity:.9}.links{display:flex;flex-direction:column;gap:15px}.link-btn{display:flex;align-items:center;justify-content:center;padding:18px 25px;background:white;border:2px solid #e2e8f0;border-radius:15px;text-decoration:none;color:#2d3748;font-weight:600;transition:all .3s ease;position:relative;overflow:hidden}.link-btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.1);border-color:#667eea}.link-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(102,126,234,.1),transparent);transition:left .5s}.link-btn:hover::before{left:100%}.link-icon{font-size:24px;margin-right:12px}.link-btn.primary{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;border:none}.link-btn.primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 15px 35px rgba(102,126,234,.4)}.link-btn.donate{background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);color:white;border:none}.link-btn.donate:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 15px 35px rgba(245,87,108,.4)}.footer{text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #e2e8f0}.footer p{color:#718096;font-size:13px;line-height:1.6}.warning{background:#fff5f5;border-left:4px solid #f56565;padding:15px;border-radius:8px;margin-top:20px}.warning p{color:#c53030;font-size:13px;line-height:1.5}</style>
 </head>
 <body>
     <div class="container">
         <div class="profile">
             <div class="profile-img">⚽</div>
-            <h1>Votre Nom</h1>
-            <p>Analyses et pronos football ⚽ | Stats & Value Bets 📊 | Transparence totale 💯</p>
+            <h1>Kilidjaroo</h1>
+            <p>Analyses et pronos football ⚽ | Stats & Value Bets 📊</p>
         </div>
         
         <div class="stats">
             <div class="stat-item">
-                <span class="stat-value">72%</span>
+                <span class="stat-value">100%</span>
                 <span class="stat-label">Taux Réussite</span>
             </div>
             <div class="stat-item">
-                <span class="stat-value">+18%</span>
+                <span class="stat-value">+0%</span>
                 <span class="stat-label">ROI Mensuel</span>
             </div>
             <div class="stat-item">
-                <span class="stat-value">150+</span>
+                <span class="stat-value">1</span>
                 <span class="stat-label">Pronos</span>
             </div>
         </div>
         
+        <div class="pronos-section">
+            <div class="pronos-title">
+                <span>🔥</span>
+                <span>Pronos du Jour</span>
+                <span>🔥</span>
+            </div>
+            
+        <div class="prono-card">
+          <div class="prono-match">PSG - OM </div>
+          <div class="prono-details">
+            <span class="prono-pick">PSG</span>
+            <span class="prono-cote">@ 4</span>
+            <span class="prono-time">⏰ 21h00</span>
+          </div>
+        </div>
+      
+        </div>
+        
         <div class="links">
-            <a href="https://twitter.com/votre_compte" class="link-btn primary">
+            <a href="https://x.com/kili330175" class="link-btn primary" target="_blank">
                 <span class="link-icon">𝕏</span>
                 <span>Suivez-moi sur Twitter/X</span>
             </a>
             
-            <a href="https://t.me/votre_canal" class="link-btn">
+            <a href="https://fr.tipeee.com/kili/" class="link-btn donate" target="_blank">
+                <span class="link-icon">☕</span>
+                <span>Soutenir mon travail</span>
+            </a>
+            
+            <a href="t.me/kilidjaroo" class="link-btn" target="_blank">
                 <span class="link-icon">✈️</span>
                 <span>Rejoindre Telegram</span>
             </a>
             
-            <a href="https://instagram.com/votre_compte" class="link-btn">
+            <a href="https://www.instagram.com/kilidjaroo/" class="link-btn" target="_blank">
                 <span class="link-icon">📸</span>
                 <span>Instagram</span>
-            </a>
-            
-            <a href="https://www.tipeee.com/votre_compte" class="link-btn donate">
-                <span class="link-icon">☕</span>
-                <span>Soutenir mon travail</span>
             </a>
             
             <a href="stats.html" class="link-btn">
@@ -250,12 +76,12 @@
         </div>
         
         <div class="warning">
-            <p><strong>⚠️ Avertissement :</strong> Les paris sportifs comportent des risques financiers. Mes analyses sont des opinions personnelles basées sur des statistiques et ne constituent pas des garanties de gains. Jouez responsable. +18 ans.</p>
+            <p><strong>⚠️ Avertissement :</strong> Les paris sportifs comportent des risques financiers. Mes analyses sont des opinions personnelles. Jouez responsable. +18 ans.</p>
         </div>
         
         <div class="footer">
-            <p>📧 Contact: votre.email@example.com</p>
-            <p style="margin-top: 10px; font-size: 11px;">Dernière mise à jour : Octobre 2025</p>
+            <p>📧 Contact: kilidjaroo@gmail.com</p>
+            <p style="margin-top: 10px; font-size: 11px;">Dernière mise à jour : 04/10/2025</p>
         </div>
     </div>
 </body>
